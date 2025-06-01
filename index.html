@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Akshit Verma - Dynamic Digital Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="light">
+      <!-- Theme Selector Dropdown -->
+      <div class="theme-selector">
+        <label for="theme">Theme:</label>
+        <select id="theme" onchange="changeTheme(this.value)">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+
+      <div class="container">
+        <div class="time">
+          <div class="time-colon">
+            <div class="time-text">
+              <span class="num hour_num">08</span>
+              <span class="text">Hours</span>
+            </div>
+            <span class="colon">:</span>
+          </div>
+          <div class="time-colon">
+            <div class="time-text">
+              <span class="num min_num">45</span>
+              <span class="text">Minutes</span>
+            </div>
+            <span class="colon">:</span>
+          </div>
+          <div class="time-colon">
+            <div class="time-text">
+              <span class="num sec_num">06</span>
+              <span class="text">Seconds</span>
+            </div>
+            <span class="am_pm">AM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

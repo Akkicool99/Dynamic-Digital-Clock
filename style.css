@@ -1,0 +1,274 @@
+/* Google fonts import link */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.4s ease;
+}
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f8ff;
+  padding: 0 20px;
+}
+section.dark{
+  background: #24292D;
+}
+section .container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  max-width: 560px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  border-radius: 12px;
+
+}
+section.dark .container{
+  background: #323840;
+}
+section .container .icons i{
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  height: 30px;
+  width: 30px;
+  background: #24292D;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+section.dark .container .icons i{
+  background: #fff;
+  color: #323840;
+}
+.container .icons i.fa-sun{
+  opacity: 0;
+  pointer-events: none;
+}
+section.dark .container .icons i.fa-sun{
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 16px;
+}
+section .container .time{
+  display: flex;
+  align-items: center;
+}
+.container .time .time-colon{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.time .time-colon .am_pm{
+  position: absolute;
+  top: 0;
+  right: -50px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+section.dark .time .time-colon .am_pm{
+  color: #fff;
+}
+.time .time-colon .time-text{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: #f0d8ff;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+section.dark .time .time-colon .time-text{
+  background: #24292D;
+}
+.time .time-colon .time-text,
+.time .time-colon .colon{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+section.dark .time .time-text .num,
+section.dark .time .colon{
+  color: #fff;
+}
+.time .time-colon .colon{
+  font-size: 40px;
+  margin: 0 10px;
+}
+.time .time-colon .time-text .text{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+section.dark .time .time-colon .text{
+  color: #fff;
+}
+/* Theme Blue */
+section.blue {
+  background: #001f3f;
+}
+section.blue .container {
+  background: #003366;
+}
+section.blue .time .time-colon .time-text {
+  background: #004080;
+}
+section.blue .time .time-text .num,
+section.blue .time .colon,
+section.blue .time .text,
+section.blue .am_pm {
+  color: #7FDBFF;
+}
+
+/* Theme Green */
+section.green {
+  background: #d0f0c0;
+}
+section.green .container {
+  background: #b0e57c;
+}
+section.green .time .time-colon .time-text {
+  background: #a0d468;
+}
+section.green .time .time-text .num,
+section.green .time .colon,
+section.green .time .text,
+section.green .am_pm {
+  color: #003300;
+}
+
+/* Optional: Style the selector */
+.theme-selector {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+}
+
+.theme-selector label,
+.theme-selector select {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+}
+
+
+/* Default style */
+.theme-selector {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+}
+
+.theme-selector label,
+.theme-selector select {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Light theme (default text color is already fine) */
+section.light .theme-selector label,
+section.light .theme-selector select {
+  color: #000;
+}
+
+/* Dark, Blue, and Green themes: white text */
+section.dark .theme-selector label,
+section.dark .theme-selector select,
+section.blue .theme-selector label,
+section.blue .theme-selector select,
+section.green .theme-selector label,
+section.green .theme-selector select {
+  color: #fff;
+}
+
+.theme-selector select {
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.theme-selector select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #fff; /* Ensure dropdown has a white background */
+  color: #000;
+  border: 1px solid #ccc;
+  appearance: none;
+}
+
+/* When dark, blue, or green theme is active */
+section.dark .theme-selector select,
+section.blue .theme-selector select,
+section.green .theme-selector select {
+  background-color: #333;   /* Dropdown closed */
+  color: #fff;
+  border: 1px solid #888;
+}
+
+/* Optional: Better contrast on hover/focus */
+.theme-selector select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+
+/* Base style for dropdown */
+.theme-selector select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  appearance: none;
+}
+
+/* Dark theme */
+section.dark .theme-selector select {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #888;
+}
+
+/* Blue theme */
+section.blue .theme-selector select {
+  background-color: #004080; /* Match the blue theme box */
+  color: #7FDBFF;
+  border: 1px solid #5dade2;
+}
+
+/* Green theme */
+section.green .theme-selector select {
+  background-color: #a0d468; /* Match green box */
+  color: #003300;
+  border: 1px solid #7dbf44;
+}
+
+/* Optional: Label color matching */
+section.dark .theme-selector label,
+section.blue .theme-selector label,
+section.green .theme-selector label {
+  color: #fff;
+}
